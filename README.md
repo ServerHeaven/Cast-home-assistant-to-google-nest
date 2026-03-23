@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://TU_USUARIO.github.io/NOMBRE_REPO/">🌐 Ver la guía online</a> ·
+  <a href="https://TU_USUARIO.github.io/NOMBRE_REPO/](https://serverheaven.github.io/Cast-home-assistant-to-google-nest/">🌐 Ver la guía online</a> ·
   <a href="https://github.com/TU_USUARIO/NOMBRE_REPO/issues">🐛 Reportar error</a> ·
   <a href="https://github.com/TU_USUARIO/NOMBRE_REPO/issues">💡 Sugerir mejora</a>
 </p>

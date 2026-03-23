@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -37,98 +36,98 @@ body{
 
 /* Noise overlay */
 body::before{
-content:’’;position:fixed;inset:0;z-index:9999;pointer-events:none;
-background:url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘n’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23n)’ opacity=‘0.03’/%3E%3C/svg%3E”);
-opacity:.4;
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity:.4;
 }
 
 /* Hero */
 .hero{
-position:relative;
-min-height:100vh;
-display:flex;align-items:center;justify-content:center;
-text-align:center;
-padding:2rem;
-overflow:hidden;
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:2rem;
+  overflow:hidden;
 }
 .hero::before{
-content:’’;position:absolute;
-width:800px;height:800px;
-background:radial-gradient(circle,var(–accent-glow) 0%,transparent 70%);
-top:-200px;right:-200px;
-animation:pulse 8s ease-in-out infinite;
+  content:'';position:absolute;
+  width:800px;height:800px;
+  background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);
+  top:-200px;right:-200px;
+  animation:pulse 8s ease-in-out infinite;
 }
 .hero::after{
-content:’’;position:absolute;
-width:600px;height:600px;
-background:radial-gradient(circle,#ff6b3515 0%,transparent 70%);
-bottom:-150px;left:-150px;
-animation:pulse 10s ease-in-out infinite reverse;
+  content:'';position:absolute;
+  width:600px;height:600px;
+  background:radial-gradient(circle,#ff6b3515 0%,transparent 70%);
+  bottom:-150px;left:-150px;
+  animation:pulse 10s ease-in-out infinite reverse;
 }
 @keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.15);opacity:1}}
 
 .hero-content{position:relative;z-index:2;max-width:800px}
 .hero-badge{
-display:inline-flex;align-items:center;gap:8px;
-background:var(–accent-dim);border:1px solid var(–accent);
-border-radius:50px;padding:6px 18px;
-font-size:.8rem;font-weight:600;color:var(–accent);
-letter-spacing:.05em;text-transform:uppercase;
-margin-bottom:2rem;
-animation:fadeUp .8s ease both;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-dim);border:1px solid var(--accent);
+  border-radius:50px;padding:6px 18px;
+  font-size:.8rem;font-weight:600;color:var(--accent);
+  letter-spacing:.05em;text-transform:uppercase;
+  margin-bottom:2rem;
+  animation:fadeUp .8s ease both;
 }
-.hero-badge::before{content:’’;width:6px;height:6px;border-radius:50%;background:var(–accent);animation:blink 2s infinite}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 .hero h1{
-font-size:clamp(2.5rem,6vw,4.5rem);
-font-weight:900;
-line-height:1.05;
-letter-spacing:-.03em;
-animation:fadeUp .8s ease .1s both;
+  font-size:clamp(2.5rem,6vw,4.5rem);
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-.03em;
+  animation:fadeUp .8s ease .1s both;
 }
 .hero h1 .gradient{
-background:linear-gradient(135deg,var(–accent),var(–blue));
--webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background:linear-gradient(135deg,var(--accent),var(--blue));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 .hero p{
-font-size:1.2rem;color:var(–text-dim);
-margin-top:1.5rem;max-width:600px;margin-inline:auto;
-animation:fadeUp .8s ease .2s both;
+  font-size:1.2rem;color:var(--text-dim);
+  margin-top:1.5rem;max-width:600px;margin-inline:auto;
+  animation:fadeUp .8s ease .2s both;
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
 .scroll-hint{
-position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-display:flex;flex-direction:column;align-items:center;gap:8px;
-color:var(–text-muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
-animation:fadeUp 1s ease .6s both;
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:var(--text-muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
+  animation:fadeUp 1s ease .6s both;
 }
 .scroll-arrow{
-width:20px;height:20px;border-right:2px solid var(–text-muted);border-bottom:2px solid var(–text-muted);
-transform:rotate(45deg);animation:bounce 2s infinite;
+  width:20px;height:20px;border-right:2px solid var(--text-muted);border-bottom:2px solid var(--text-muted);
+  transform:rotate(45deg);animation:bounce 2s infinite;
 }
 @keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(6px)}}
 
 /* Nav */
 .toc{
-position:sticky;top:0;z-index:100;
-background:var(–bg);border-bottom:1px solid var(–border);
-backdrop-filter:blur(20px);
-padding:1rem 2rem;
-display:flex;gap:1rem;overflow-x:auto;
-scrollbar-width:none;
+  position:sticky;top:0;z-index:100;
+  background:var(--bg);border-bottom:1px solid var(--border);
+  backdrop-filter:blur(20px);
+  padding:1rem 2rem;
+  display:flex;gap:1rem;overflow-x:auto;
+  scrollbar-width:none;
 }
 .toc::-webkit-scrollbar{display:none}
 .toc a{
-white-space:nowrap;
-font-size:.82rem;font-weight:600;color:var(–text-muted);
-text-decoration:none;
-padding:6px 14px;border-radius:8px;
-transition:all .2s;
-border:1px solid transparent;
+  white-space:nowrap;
+  font-size:.82rem;font-weight:600;color:var(--text-muted);
+  text-decoration:none;
+  padding:6px 14px;border-radius:8px;
+  transition:all .2s;
+  border:1px solid transparent;
 }
-.toc a:hover{color:var(–accent);background:var(–accent-dim);border-color:var(–accent)}
+.toc a:hover{color:var(--accent);background:var(--accent-dim);border-color:var(--accent)}
 
 /* Main layout */
 .container{max-width:860px;margin:0 auto;padding:2rem 1.5rem 6rem}
@@ -136,172 +135,170 @@ border:1px solid transparent;
 /* Section */
 .section{margin-top:5rem;animation:fadeUp .6s ease both}
 .section-label{
-display:inline-flex;align-items:center;gap:8px;
-font-size:.75rem;font-weight:600;color:var(–orange);
-letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.75rem;font-weight:600;color:var(--orange);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;
 }
 .section h2{
-font-size:2.2rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;
-margin-bottom:1rem;
+  font-size:2.2rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;
+  margin-bottom:1rem;
 }
-.section h2 .num{color:var(–accent);font-family:‘JetBrains Mono’,monospace;font-size:1.8rem}
-.section>p{color:var(–text-dim);font-size:1.05rem;margin-bottom:2rem;max-width:700px}
+.section h2 .num{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:1.8rem}
+.section>p{color:var(--text-dim);font-size:1.05rem;margin-bottom:2rem;max-width:700px}
 
 /* Steps */
 .step{
-position:relative;
-padding:2rem;
-background:var(–surface);
-border:1px solid var(–border);
-border-radius:var(–radius);
-margin-bottom:1.5rem;
-transition:border-color .3s;
+  position:relative;
+  padding:2rem;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  margin-bottom:1.5rem;
+  transition:border-color .3s;
 }
-.step:hover{border-color:var(–accent)}
+.step:hover{border-color:var(--accent)}
 .step::before{
-content:attr(data-step);
-position:absolute;top:-14px;left:20px;
-background:var(–accent);color:var(–bg);
-font-family:‘JetBrains Mono’,monospace;
-font-size:.75rem;font-weight:700;
-padding:4px 12px;border-radius:6px;
+  content:attr(data-step);
+  position:absolute;top:-14px;left:20px;
+  background:var(--accent);color:var(--bg);
+  font-family:'JetBrains Mono',monospace;
+  font-size:.75rem;font-weight:700;
+  padding:4px 12px;border-radius:6px;
 }
 .step h3{font-size:1.15rem;font-weight:700;margin-bottom:.75rem;padding-right:2rem}
-.step p,.step li{color:var(–text-dim);font-size:.95rem}
+.step p,.step li{color:var(--text-dim);font-size:.95rem}
 .step ul{list-style:none;padding:0;margin-top:.5rem}
 .step ul li{position:relative;padding-left:1.4rem;margin-bottom:.4rem}
-.step ul li::before{content:‘→’;position:absolute;left:0;color:var(–accent);font-weight:700}
+.step ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:700}
 
 /* Code blocks */
 pre{
-background:var(–code-bg);
-border:1px solid var(–border);
-border-radius:10px;
-padding:1.25rem 1.5rem;
-overflow-x:auto;
-margin:.75rem 0;
-position:relative;
+  background:var(--code-bg);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.25rem 1.5rem;
+  overflow-x:auto;
+  margin:.75rem 0;
+  position:relative;
 }
 pre::before{
-content:attr(data-lang);
-position:absolute;top:8px;right:12px;
-font-size:.65rem;font-weight:600;
-color:var(–text-muted);
-text-transform:uppercase;letter-spacing:.08em;
-background:var(–surface-2);padding:2px 8px;border-radius:4px;
+  content:attr(data-lang);
+  position:absolute;top:8px;right:12px;
+  font-size:.65rem;font-weight:600;
+  color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:.08em;
+  background:var(--surface-2);padding:2px 8px;border-radius:4px;
 }
 code{
-font-family:‘JetBrains Mono’,monospace;
-font-size:.85rem;line-height:1.8;
-color:var(–text);
+  font-family:'JetBrains Mono',monospace;
+  font-size:.85rem;line-height:1.8;
+  color:var(--text);
 }
-.code-comment{color:var(–text-muted)}
-.code-key{color:var(–blue)}
-.code-val{color:var(–accent)}
-.code-str{color:var(–orange)}
-.code-cmd{color:var(–purple)}
+.code-comment{color:var(--text-muted)}
+.code-key{color:var(--blue)}
+.code-val{color:var(--accent)}
+.code-str{color:var(--orange)}
+.code-cmd{color:var(--purple)}
 
 /* Inline code */
 p code, li code{
-background:var(–surface-2);
-padding:2px 7px;border-radius:5px;
-font-size:.82rem;color:var(–blue);
-border:1px solid var(–border);
+  background:var(--surface-2);
+  padding:2px 7px;border-radius:5px;
+  font-size:.82rem;color:var(--blue);
+  border:1px solid var(--border);
 }
 
 /* Alert / Tip boxes */
 .alert{
-display:flex;gap:1rem;
-padding:1.25rem 1.5rem;
-border-radius:var(–radius);
-margin:1rem 0;
-font-size:.92rem;
-line-height:1.6;
+  display:flex;gap:1rem;
+  padding:1.25rem 1.5rem;
+  border-radius:var(--radius);
+  margin:1rem 0;
+  font-size:.92rem;
+  line-height:1.6;
 }
-.alert-warn{background:#ff6b3510;border:1px solid #ff6b3540;color:var(–orange)}
-.alert-tip{background:#06d6a010;border:1px solid #06d6a030;color:var(–accent)}
-.alert-info{background:#4cc9f010;border:1px solid #4cc9f030;color:var(–blue)}
+.alert-warn{background:#ff6b3510;border:1px solid #ff6b3540;color:var(--orange)}
+.alert-tip{background:#06d6a010;border:1px solid #06d6a030;color:var(--accent)}
+.alert-info{background:#4cc9f010;border:1px solid #4cc9f030;color:var(--blue)}
 .alert-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
 
 /* Option selector */
 .options-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2rem 0}
 .option-card{
-background:var(–surface);
-border:2px solid var(–border);
-border-radius:var(–radius);
-padding:1.75rem;
-cursor:default;
-transition:all .3s;
-position:relative;overflow:hidden;
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.75rem;
+  cursor:default;
+  transition:all .3s;
+  position:relative;overflow:hidden;
 }
 .option-card::after{
-content:’’;position:absolute;top:0;left:0;right:0;height:3px;
-background:linear-gradient(90deg,var(–accent),var(–blue));
-transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--blue));
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
 }
-.option-card:hover{border-color:var(–accent);transform:translateY(-2px)}
+.option-card:hover{border-color:var(--accent);transform:translateY(-2px)}
 .option-card:hover::after{transform:scaleX(1)}
 .option-card .tag{
-font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
-padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:.75rem;
+  font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:.75rem;
 }
-.tag-best{background:var(–accent-dim);color:var(–accent);border:1px solid var(–accent)}
-.tag-alt{background:#4cc9f015;color:var(–blue);border:1px solid #4cc9f040}
-.tag-adv{background:#b388ff15;color:var(–purple);border:1px solid #b388ff40}
+.tag-best{background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent)}
+.tag-alt{background:#4cc9f015;color:var(--blue);border:1px solid #4cc9f040}
+.tag-adv{background:#b388ff15;color:var(--purple);border:1px solid #b388ff40}
 .option-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
-.option-card p{color:var(–text-dim);font-size:.88rem}
+.option-card p{color:var(--text-dim);font-size:.88rem}
 
 /* Comparison table */
 .compare-table{
-width:100%;border-collapse:collapse;margin:1.5rem 0;
-font-size:.88rem;
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.88rem;
 }
 .compare-table th{
-text-align:left;padding:10px 14px;
-background:var(–surface-2);color:var(–text-dim);
-font-weight:600;font-size:.75rem;
-letter-spacing:.08em;text-transform:uppercase;
-border-bottom:2px solid var(–accent);
+  text-align:left;padding:10px 14px;
+  background:var(--surface-2);color:var(--text-dim);
+  font-weight:600;font-size:.75rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
 }
 .compare-table td{
-padding:10px 14px;
-border-bottom:1px solid var(–border);
-color:var(–text-dim);
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  color:var(--text-dim);
 }
-.compare-table tr:hover td{background:var(–surface)}
-.check{color:var(–accent);font-weight:700}
+.compare-table tr:hover td{background:var(--surface)}
+.check{color:var(--accent);font-weight:700}
 .cross{color:#ff4444;font-weight:700}
 
 /* Divider */
 .divider{
-height:1px;
-background:linear-gradient(90deg,transparent,var(–border),transparent);
-margin:4rem 0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),transparent);
+  margin:4rem 0;
 }
 
 /* Footer */
 .footer{
-text-align:center;padding:3rem 2rem;
-border-top:1px solid var(–border);
-color:var(–text-muted);font-size:.85rem;
+  text-align:center;padding:3rem 2rem;
+  border-top:1px solid var(--border);
+  color:var(--text-muted);font-size:.85rem;
 }
 
 /* Responsive */
 @media(max-width:640px){
-.hero h1{font-size:2.2rem}
-.section h2{font-size:1.6rem}
-.step{padding:1.5rem}
-pre{padding:1rem}
-code{font-size:.78rem}
-.options-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+  .section h2{font-size:1.6rem}
+  .step{padding:1.5rem}
+  pre{padding:1rem}
+  code{font-size:.78rem}
+  .options-grid{grid-template-columns:1fr}
 }
 </style>
-
 </head>
 <body>
 
 <!-- ============ HERO ============ -->
-
 <section class="hero" id="top">
   <div class="hero-content">
     <div class="hero-badge"><span></span> Guía completa · Sin Nabu Casa</div>
@@ -315,7 +312,6 @@ code{font-size:.78rem}
 </section>
 
 <!-- ============ NAV ============ -->
-
 <nav class="toc">
   <a href="#requisitos">Requisitos</a>
   <a href="#comparativa">Comparativa</a>
@@ -326,420 +322,362 @@ code{font-size:.78rem}
 </nav>
 
 <!-- ============ CONTENT ============ -->
-
 <div class="container">
 
   <!-- REQUISITOS -->
-
   <section class="section" id="requisitos">
     <div class="section-label">📋 Antes de empezar</div>
     <h2>Requisitos previos</h2>
     <p>Asegúrate de tener todo esto listo antes de seguir la guía.</p>
 
-```
-<div class="step" data-step="Requisito 1">
-  <h3>Home Assistant funcionando en tu red local</h3>
-  <p>Accesible por HTTP (ej: <code>http://192.168.1.100:8123</code>). No necesitas HTTPS ni certificados SSL.</p>
-</div>
+    <div class="step" data-step="Requisito 1">
+      <h3>Home Assistant funcionando en tu red local</h3>
+      <p>Accesible por HTTP (ej: <code>http://192.168.1.100:8123</code>). No necesitas HTTPS ni certificados SSL.</p>
+    </div>
 
-<div class="step" data-step="Requisito 2">
-  <h3>Google Nest Hub 2 en la misma red Wi-Fi</h3>
-  <p>Tu Nest Hub debe estar configurado con la app Google Home y conectado a la misma red local que tu servidor de HA.</p>
-</div>
+    <div class="step" data-step="Requisito 2">
+      <h3>Google Nest Hub 2 en la misma red Wi-Fi</h3>
+      <p>Tu Nest Hub debe estar configurado con la app Google Home y conectado a la misma red local que tu servidor de HA.</p>
+    </div>
 
-<div class="step" data-step="Requisito 3">
-  <h3>HACS instalado en Home Assistant</h3>
-  <p>Home Assistant Community Store. Necesario para los métodos 1 y 2. Si no lo tienes, instálalo desde <code>hacs.xyz</code>.</p>
-</div>
+    <div class="step" data-step="Requisito 3">
+      <h3>HACS instalado en Home Assistant</h3>
+      <p>Home Assistant Community Store. Necesario para los métodos 1 y 2. Si no lo tienes, instálalo desde <code>hacs.xyz</code>.</p>
+    </div>
 
-<div class="step" data-step="Requisito 4">
-  <h3>IP fija para tu Nest Hub</h3>
-  <p>Entra en la configuración de tu router y asigna una IP estática a tu Nest Hub. La encontrarás en la app Google Home → Dispositivo → Información del dispositivo.</p>
-</div>
-```
-
+    <div class="step" data-step="Requisito 4">
+      <h3>IP fija para tu Nest Hub</h3>
+      <p>Entra en la configuración de tu router y asigna una IP estática a tu Nest Hub. La encontrarás en la app Google Home → Dispositivo → Información del dispositivo.</p>
+    </div>
   </section>
 
   <!-- COMPARATIVA -->
-
   <section class="section" id="comparativa">
     <div class="section-label">⚖️ Elige tu camino</div>
     <h2>3 métodos disponibles</h2>
     <p>Cada uno tiene sus ventajas. Aquí tienes un resumen para que elijas el que mejor se adapte a ti.</p>
 
-```
-<div class="options-grid">
-  <div class="option-card">
-    <span class="tag tag-best">★ Recomendado</span>
-    <h3>Continuously Casting Dashboards</h3>
-    <p>Integración HACS con auto-recuperación, configuración por UI, y gestión de horarios. La más completa.</p>
-  </div>
-  <div class="option-card">
-    <span class="tag tag-alt">Alternativa</span>
-    <h3>DashCast</h3>
-    <p>Componente custom ligero. Castea cualquier URL vía servicio de HA. Requiere automatizaciones manuales.</p>
-  </div>
-  <div class="option-card">
-    <span class="tag tag-adv">Avanzado</span>
-    <h3>CATT (CLI)</h3>
-    <p>Herramienta de línea de comandos. Máximo control pero requiere un host Linux/Docker adicional.</p>
-  </div>
-</div>
+    <div class="options-grid">
+      <div class="option-card">
+        <span class="tag tag-best">★ Recomendado</span>
+        <h3>Continuously Casting Dashboards</h3>
+        <p>Integración HACS con auto-recuperación, configuración por UI, y gestión de horarios. La más completa.</p>
+      </div>
+      <div class="option-card">
+        <span class="tag tag-alt">Alternativa</span>
+        <h3>DashCast</h3>
+        <p>Componente custom ligero. Castea cualquier URL vía servicio de HA. Requiere automatizaciones manuales.</p>
+      </div>
+      <div class="option-card">
+        <span class="tag tag-adv">Avanzado</span>
+        <h3>CATT (CLI)</h3>
+        <p>Herramienta de línea de comandos. Máximo control pero requiere un host Linux/Docker adicional.</p>
+      </div>
+    </div>
 
-<table class="compare-table">
-  <thead>
-    <tr>
-      <th>Característica</th>
-      <th>CCD</th>
-      <th>DashCast</th>
-      <th>CATT</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>HTTP local</td>
-      <td class="check">✓</td>
-      <td class="check">✓</td>
-      <td class="check">✓</td>
-    </tr>
-    <tr>
-      <td>Auto-recuperación</td>
-      <td class="check">✓</td>
-      <td class="cross">✗</td>
-      <td class="cross">✗</td>
-    </tr>
-    <tr>
-      <td>Config por UI</td>
-      <td class="check">✓</td>
-      <td class="cross">✗</td>
-      <td class="cross">✗</td>
-    </tr>
-    <tr>
-      <td>Horarios</td>
-      <td class="check">✓ nativo</td>
-      <td>con automatización</td>
-      <td>con cron/automatización</td>
-    </tr>
-    <tr>
-      <td>Dificultad</td>
-      <td>Fácil</td>
-      <td>Media</td>
-      <td>Alta</td>
-    </tr>
-    <tr>
-      <td>Multi-dispositivo</td>
-      <td class="check">✓</td>
-      <td class="check">✓</td>
-      <td class="check">✓</td>
-    </tr>
-  </tbody>
-</table>
-```
-
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>CCD</th>
+          <th>DashCast</th>
+          <th>CATT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTTP local</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+        <tr>
+          <td>Auto-recuperación</td>
+          <td class="check">✓</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+        </tr>
+        <tr>
+          <td>Config por UI</td>
+          <td class="check">✓</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+        </tr>
+        <tr>
+          <td>Horarios</td>
+          <td class="check">✓ nativo</td>
+          <td>con automatización</td>
+          <td>con cron/automatización</td>
+        </tr>
+        <tr>
+          <td>Dificultad</td>
+          <td>Fácil</td>
+          <td>Media</td>
+          <td>Alta</td>
+        </tr>
+        <tr>
+          <td>Multi-dispositivo</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+          <td class="check">✓</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <div class="divider"></div>
 
   <!-- ============ MÉTODO 1 ============ -->
-
   <section class="section" id="metodo1">
     <div class="section-label">🏆 Método recomendado</div>
     <h2><span class="num">01</span> Continuously Casting Dashboards</h2>
     <p>Integración HACS que mantiene tu dashboard casteado automáticamente. Se auto-recupera si el Nest Hub entra en reposo o si alguien interrumpe el cast.</p>
 
-```
-<!-- Paso 1 -->
-<div class="step" data-step="Paso 1">
-  <h3>Crear un usuario dedicado para el Nest Hub</h3>
-  <p>Ve a <code>Ajustes → Personas → Añadir persona</code> y crea un usuario nuevo. Importante: <strong>sin permisos de administrador</strong>. Anota el User ID que verás en la URL al editar el perfil.</p>
-  <div class="alert alert-tip">
-    <span class="alert-icon">💡</span>
-    <span>El User ID es la cadena larga que aparece en la URL cuando estás en <code>/profile/</code>. Ejemplo: <code>a1b2c3d4e5f6...</code></span>
-  </div>
-</div>
+    <!-- Paso 1 -->
+    <div class="step" data-step="Paso 1">
+      <h3>Crear un usuario dedicado para el Nest Hub</h3>
+      <p>Ve a <code>Ajustes → Personas → Añadir persona</code> y crea un usuario nuevo. Importante: <strong>sin permisos de administrador</strong>. Anota el User ID que verás en la URL al editar el perfil.</p>
+      <div class="alert alert-tip">
+        <span class="alert-icon">💡</span>
+        <span>El User ID es la cadena larga que aparece en la URL cuando estás en <code>/profile/</code>. Ejemplo: <code>a1b2c3d4e5f6...</code></span>
+      </div>
+    </div>
 
-<!-- Paso 2 -->
-<div class="step" data-step="Paso 2">
-  <h3>Configurar Trusted Networks en <code>configuration.yaml</code></h3>
-  <p>Esto permite que el Nest Hub inicie sesión sin contraseña desde su IP fija.</p>
-  <pre data-lang="yaml"><code><span class="code-key">homeassistant</span>:
-```
+    <!-- Paso 2 -->
+    <div class="step" data-step="Paso 2">
+      <h3>Configurar Trusted Networks en <code>configuration.yaml</code></h3>
+      <p>Esto permite que el Nest Hub inicie sesión sin contraseña desde su IP fija.</p>
+      <pre data-lang="yaml"><code><span class="code-key">homeassistant</span>:
+  <span class="code-key">auth_providers</span>:
+    - <span class="code-key">type</span>: <span class="code-val">trusted_networks</span>
+      <span class="code-key">trusted_networks</span>:
+        - <span class="code-str">192.168.1.XX/32</span>  <span class="code-comment"># ← IP fija de tu Nest Hub</span>
+      <span class="code-key">trusted_users</span>:
+        <span class="code-str">192.168.1.XX</span>:
+          - <span class="code-str">"TU_USER_ID_AQUI"</span>
+      <span class="code-key">allow_bypass_login</span>: <span class="code-val">true</span>
+    - <span class="code-key">type</span>: <span class="code-val">homeassistant</span>  <span class="code-comment"># ← mantener login normal para otros</span></code></pre>
+      <div class="alert alert-warn">
+        <span class="alert-icon">⚠️</span>
+        <span>Reinicia Home Assistant después de modificar <code>configuration.yaml</code>. Si algo va mal, borra los cambios y reinicia de nuevo.</span>
+      </div>
+    </div>
 
-<span class="code-key">auth_providers</span>:
-- <span class="code-key">type</span>: <span class="code-val">trusted_networks</span>
-<span class="code-key">trusted_networks</span>:
-- <span class="code-str">192.168.1.XX/32</span>  <span class="code-comment"># ← IP fija de tu Nest Hub</span>
-<span class="code-key">trusted_users</span>:
-<span class="code-str">192.168.1.XX</span>:
-- <span class="code-str">“TU_USER_ID_AQUI”</span>
-<span class="code-key">allow_bypass_login</span>: <span class="code-val">true</span>
-- <span class="code-key">type</span>: <span class="code-val">homeassistant</span>  <span class="code-comment"># ← mantener login normal para otros</span></code></pre>
-<div class="alert alert-warn">
-<span class="alert-icon">⚠️</span>
-<span>Reinicia Home Assistant después de modificar <code>configuration.yaml</code>. Si algo va mal, borra los cambios y reinicia de nuevo.</span>
-</div>
-</div>
-
-```
-<!-- Paso 3 -->
-<div class="step" data-step="Paso 3">
-  <h3>Instalar ha-catt-fix (evita desconexión a los 10 min)</h3>
-  <p>Este recurso frontend previene que el Nest Hub desconecte el cast por inactividad.</p>
-  <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → <span class="code-val">Frontend</span> (pestaña)
-```
-
+    <!-- Paso 3 -->
+    <div class="step" data-step="Paso 3">
+      <h3>Instalar ha-catt-fix (evita desconexión a los 10 min)</h3>
+      <p>Este recurso frontend previene que el Nest Hub desconecte el cast por inactividad.</p>
+      <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → <span class="code-val">Frontend</span> (pestaña)
 <span class="code-cmd">2.</span> Tres puntos (⋮) → <span class="code-val">Custom repositories</span>
 <span class="code-cmd">3.</span> URL: <span class="code-str">swiergot/ha-catt-fix</span>
-Categoría: <span class="code-val">Dashboard</span> (Lovelace)
-<span class="code-cmd">4.</span> Buscar <span class="code-str">“ha-catt-fix”</span> → Descargar
+   Categoría: <span class="code-val">Dashboard</span> (Lovelace)
+<span class="code-cmd">4.</span> Buscar <span class="code-str">"ha-catt-fix"</span> → Descargar
 <span class="code-cmd">5.</span> Verificar en: Dashboard → Editar → Recursos</code></pre>
-</div>
+    </div>
 
-```
-<!-- Paso 4 -->
-<div class="step" data-step="Paso 4">
-  <h3>Instalar Continuously Casting Dashboards</h3>
-  <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → <span class="code-val">Integraciones</span>
-```
-
+    <!-- Paso 4 -->
+    <div class="step" data-step="Paso 4">
+      <h3>Instalar Continuously Casting Dashboards</h3>
+      <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → <span class="code-val">Integraciones</span>
 <span class="code-cmd">2.</span> Tres puntos (⋮) → <span class="code-val">Custom repositories</span>
 <span class="code-cmd">3.</span> URL: <span class="code-str">b0mbays/continuously_casting_dashboards</span>
-Categoría: <span class="code-val">Integration</span>
+   Categoría: <span class="code-val">Integration</span>
 <span class="code-cmd">4.</span> Buscar → Descargar → <span class="code-val">Reiniciar HA</span></code></pre>
-</div>
+    </div>
 
-```
-<!-- Paso 5 -->
-<div class="step" data-step="Paso 5">
-  <h3>Crear un dashboard optimizado para el Nest Hub</h3>
-  <p>La pantalla del Nest Hub 2 es de solo 7", así que necesitas un dashboard limpio y táctil.</p>
-  <ul>
-    <li>Ve a <code>Ajustes → Dashboards → Añadir dashboard</code></li>
-    <li>Dale un nombre como <code>nest-hub</code></li>
-    <li>Usa Grid Cards y tarjetas grandes, con botones táctiles fáciles de pulsar</li>
-    <li>Instala <code>kiosk-mode</code> vía HACS para ocultar la barra superior (añade <code>?kiosk</code> a la URL)</li>
-  </ul>
-</div>
+    <!-- Paso 5 -->
+    <div class="step" data-step="Paso 5">
+      <h3>Crear un dashboard optimizado para el Nest Hub</h3>
+      <p>La pantalla del Nest Hub 2 es de solo 7", así que necesitas un dashboard limpio y táctil.</p>
+      <ul>
+        <li>Ve a <code>Ajustes → Dashboards → Añadir dashboard</code></li>
+        <li>Dale un nombre como <code>nest-hub</code></li>
+        <li>Usa Grid Cards y tarjetas grandes, con botones táctiles fáciles de pulsar</li>
+        <li>Instala <code>kiosk-mode</code> vía HACS para ocultar la barra superior (añade <code>?kiosk</code> a la URL)</li>
+      </ul>
+    </div>
 
-<!-- Paso 6 -->
-<div class="step" data-step="Paso 6">
-  <h3>Configurar la integración</h3>
-  <p>Añade esto a tu <code>configuration.yaml</code>:</p>
-  <pre data-lang="yaml"><code><span class="code-key">continuously_casting_dashboards</span>:
-```
+    <!-- Paso 6 -->
+    <div class="step" data-step="Paso 6">
+      <h3>Configurar la integración</h3>
+      <p>Añade esto a tu <code>configuration.yaml</code>:</p>
+      <pre data-lang="yaml"><code><span class="code-key">continuously_casting_dashboards</span>:
+  <span class="code-key">logging_level</span>: <span class="code-val">warning</span>
+  <span class="code-key">cast_delay</span>: <span class="code-val">45</span>          <span class="code-comment"># segundos entre comprobaciones</span>
+  <span class="code-key">start_time</span>: <span class="code-str">"07:00"</span>     <span class="code-comment"># hora de inicio del cast</span>
+  <span class="code-key">end_time</span>: <span class="code-str">"01:00"</span>       <span class="code-comment"># hora de fin del cast</span>
+  <span class="code-key">devices</span>:
+    <span class="code-str">"Pantalla del salón"</span>:  <span class="code-comment"># ← nombre EXACTO en Google Home</span>
+      - <span class="code-key">dashboard_url</span>: <span class="code-str">"http://192.168.1.100:8123/lovelace-nest/0?kiosk"</span>
+        <span class="code-key">volume</span>: <span class="code-val">5</span></code></pre>
+      <div class="alert alert-info">
+        <span class="alert-icon">ℹ️</span>
+        <span>Usa la <strong>IP local</strong> de tu HA en la URL del dashboard, no <code>homeassistant.local</code>. El nombre del dispositivo debe coincidir exactamente con el que aparece en la app Google Home.</span>
+      </div>
+    </div>
 
-<span class="code-key">logging_level</span>: <span class="code-val">warning</span>
-<span class="code-key">cast_delay</span>: <span class="code-val">45</span>          <span class="code-comment"># segundos entre comprobaciones</span>
-<span class="code-key">start_time</span>: <span class="code-str">“07:00”</span>     <span class="code-comment"># hora de inicio del cast</span>
-<span class="code-key">end_time</span>: <span class="code-str">“01:00”</span>       <span class="code-comment"># hora de fin del cast</span>
-<span class="code-key">devices</span>:
-<span class="code-str">“Pantalla del salón”</span>:  <span class="code-comment"># ← nombre EXACTO en Google Home</span>
-- <span class="code-key">dashboard_url</span>: <span class="code-str">“http://192.168.1.100:8123/lovelace-nest/0?kiosk”</span>
-<span class="code-key">volume</span>: <span class="code-val">5</span></code></pre>
-<div class="alert alert-info">
-<span class="alert-icon">ℹ️</span>
-<span>Usa la <strong>IP local</strong> de tu HA en la URL del dashboard, no <code>homeassistant.local</code>. El nombre del dispositivo debe coincidir exactamente con el que aparece en la app Google Home.</span>
-</div>
-</div>
-
-```
-<!-- Paso 7 -->
-<div class="step" data-step="Paso 7">
-  <h3>Reiniciar y verificar</h3>
-  <p>Reinicia Home Assistant. La integración debería empezar a castear automáticamente dentro de la ventana horaria configurada. Puedes controlarla con servicios:</p>
-  <pre data-lang="yaml"><code><span class="code-comment"># Parar el cast de un dispositivo</span>
-```
-
+    <!-- Paso 7 -->
+    <div class="step" data-step="Paso 7">
+      <h3>Reiniciar y verificar</h3>
+      <p>Reinicia Home Assistant. La integración debería empezar a castear automáticamente dentro de la ventana horaria configurada. Puedes controlarla con servicios:</p>
+      <pre data-lang="yaml"><code><span class="code-comment"># Parar el cast de un dispositivo</span>
 <span class="code-key">service</span>: <span class="code-val">continuously_casting_dashboards.stop_casting</span>
 <span class="code-key">data</span>:
-<span class="code-key">device_name</span>: <span class="code-str">“Pantalla del salón”</span>
+  <span class="code-key">device_name</span>: <span class="code-str">"Pantalla del salón"</span>
 
 <span class="code-comment"># Reanudar</span>
 <span class="code-key">service</span>: <span class="code-val">continuously_casting_dashboards.resume_casting</span>
 <span class="code-key">data</span>:
-<span class="code-key">device_name</span>: <span class="code-str">“Pantalla del salón”</span></code></pre>
-</div>
-
+  <span class="code-key">device_name</span>: <span class="code-str">"Pantalla del salón"</span></code></pre>
+    </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- ============ MÉTODO 2 ============ -->
-
   <section class="section" id="metodo2">
     <div class="section-label">🔁 Alternativa</div>
     <h2><span class="num">02</span> DashCast</h2>
     <p>Componente custom de AlexxIT que permite castear cualquier URL a tus Chromecasts mediante un servicio de HA. Más ligero, pero necesita automatizaciones para mantenerlo vivo.</p>
 
-```
-<div class="step" data-step="Paso 1">
-  <h3>Configurar Trusted Networks</h3>
-  <p>Igual que en el Método 1, paso 2. Configura la IP de tu Nest Hub como red de confianza.</p>
-</div>
+    <div class="step" data-step="Paso 1">
+      <h3>Configurar Trusted Networks</h3>
+      <p>Igual que en el Método 1, paso 2. Configura la IP de tu Nest Hub como red de confianza.</p>
+    </div>
 
-<div class="step" data-step="Paso 2">
-  <h3>Instalar DashCast vía HACS</h3>
-  <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → Integraciones → ⋮ → <span class="code-val">Custom repositories</span>
-```
-
+    <div class="step" data-step="Paso 2">
+      <h3>Instalar DashCast vía HACS</h3>
+      <pre data-lang="pasos"><code><span class="code-cmd">1.</span> HACS → Integraciones → ⋮ → <span class="code-val">Custom repositories</span>
 <span class="code-cmd">2.</span> URL: <span class="code-str">AlexxIT/DashCast</span>
-Categoría: <span class="code-val">Integration</span>
+   Categoría: <span class="code-val">Integration</span>
 <span class="code-cmd">3.</span> Descargar → Reiniciar HA
 <span class="code-cmd">4.</span> Ajustes → Integraciones → <span class="code-val">Añadir integración</span> → DashCast</code></pre>
-</div>
+    </div>
 
-```
-<div class="step" data-step="Paso 3">
-  <h3>Crear automatización para castear periódicamente</h3>
-  <p>Como el Nest Hub entra en reposo tras ~10 minutos, necesitamos re-castear cada 9 minutos:</p>
-  <pre data-lang="yaml"><code><span class="code-key">automation</span>:
-```
-
-- <span class="code-key">alias</span>: <span class="code-str">“Cast Dashboard al Nest Hub”</span>
-  <span class="code-key">trigger</span>:
-  - <span class="code-key">platform</span>: <span class="code-val">time_pattern</span>
-    <span class="code-key">minutes</span>: <span class="code-str">”/9”</span>
+    <div class="step" data-step="Paso 3">
+      <h3>Crear automatización para castear periódicamente</h3>
+      <p>Como el Nest Hub entra en reposo tras ~10 minutos, necesitamos re-castear cada 9 minutos:</p>
+      <pre data-lang="yaml"><code><span class="code-key">automation</span>:
+  - <span class="code-key">alias</span>: <span class="code-str">"Cast Dashboard al Nest Hub"</span>
+    <span class="code-key">trigger</span>:
+      - <span class="code-key">platform</span>: <span class="code-val">time_pattern</span>
+        <span class="code-key">minutes</span>: <span class="code-str">"/9"</span>
     <span class="code-key">condition</span>:
-  - <span class="code-key">condition</span>: <span class="code-val">time</span>
-    <span class="code-key">after</span>: <span class="code-str">“07:00:00”</span>
-    <span class="code-key">before</span>: <span class="code-str">“01:00:00”</span>
+      - <span class="code-key">condition</span>: <span class="code-val">time</span>
+        <span class="code-key">after</span>: <span class="code-str">"07:00:00"</span>
+        <span class="code-key">before</span>: <span class="code-str">"01:00:00"</span>
     <span class="code-key">action</span>:
-  - <span class="code-key">service</span>: <span class="code-val">dash_cast.load_url</span>
-    <span class="code-key">data</span>:
-    <span class="code-key">entity_id</span>: <span class="code-str">media_player.nest_hub_salon</span>
-    <span class="code-key">url</span>: <span class="code-str">“http://192.168.1.100:8123/lovelace-nest/0”</span></code></pre>
-  
-  </div>
-
+      - <span class="code-key">service</span>: <span class="code-val">dash_cast.load_url</span>
+        <span class="code-key">data</span>:
+          <span class="code-key">entity_id</span>: <span class="code-str">media_player.nest_hub_salon</span>
+          <span class="code-key">url</span>: <span class="code-str">"http://192.168.1.100:8123/lovelace-nest/0"</span></code></pre>
+    </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- ============ MÉTODO 3 ============ -->
-
   <section class="section" id="metodo3">
     <div class="section-label">⌨️ Para los valientes</div>
     <h2><span class="num">03</span> CATT (Cast All The Things)</h2>
     <p>Herramienta CLI en Python que castea URLs a dispositivos Chromecast. Necesitas una máquina Linux/Docker en tu red donde ejecutarlo.</p>
 
-```
-<div class="step" data-step="Paso 1">
-  <h3>Instalar CATT</h3>
-  <pre data-lang="bash"><code><span class="code-cmd">pip install</span> catt</code></pre>
-</div>
+    <div class="step" data-step="Paso 1">
+      <h3>Instalar CATT</h3>
+      <pre data-lang="bash"><code><span class="code-cmd">pip install</span> catt</code></pre>
+    </div>
 
-<div class="step" data-step="Paso 2">
-  <h3>Escanear dispositivos</h3>
-  <pre data-lang="bash"><code><span class="code-cmd">catt scan</span>
-```
-
+    <div class="step" data-step="Paso 2">
+      <h3>Escanear dispositivos</h3>
+      <pre data-lang="bash"><code><span class="code-cmd">catt scan</span>
 <span class="code-comment"># Salida: Pantalla del salón - 192.168.1.55 - Google Nest Hub</span></code></pre>
-</div>
+    </div>
 
-```
-<div class="step" data-step="Paso 3">
-  <h3>Probar el cast manualmente</h3>
-  <pre data-lang="bash"><code><span class="code-cmd">catt</span> -d <span class="code-str">"Pantalla del salón"</span> cast_site \
-```
+    <div class="step" data-step="Paso 3">
+      <h3>Probar el cast manualmente</h3>
+      <pre data-lang="bash"><code><span class="code-cmd">catt</span> -d <span class="code-str">"Pantalla del salón"</span> cast_site \
+  <span class="code-str">http://192.168.1.100:8123/lovelace-nest/0</span></code></pre>
+    </div>
 
-<span class="code-str">http://192.168.1.100:8123/lovelace-nest/0</span></code></pre>
-</div>
-
-```
-<div class="step" data-step="Paso 4">
-  <h3>Automatizar con shell_command en HA</h3>
-  <pre data-lang="yaml"><code><span class="code-comment"># configuration.yaml</span>
-```
-
+    <div class="step" data-step="Paso 4">
+      <h3>Automatizar con shell_command en HA</h3>
+      <pre data-lang="yaml"><code><span class="code-comment"># configuration.yaml</span>
 <span class="code-key">shell_command</span>:
-<span class="code-key">cast_nest_hub</span>: <span class="code-str">‘catt -d “Pantalla del salón” cast_site http://192.168.1.100:8123/lovelace-nest/0’</span></code></pre>
-<p>Luego crea una automatización que llame a <code>shell_command.cast_nest_hub</code> cada 9 minutos, igual que en el método DashCast.</p>
-</div>
+  <span class="code-key">cast_nest_hub</span>: <span class="code-str">'catt -d "Pantalla del salón" cast_site http://192.168.1.100:8123/lovelace-nest/0'</span></code></pre>
+      <p>Luego crea una automatización que llame a <code>shell_command.cast_nest_hub</code> cada 9 minutos, igual que en el método DashCast.</p>
+    </div>
 
-```
-<div class="step" data-step="Paso 5">
-  <h3>Script anti-reposo (alternativa)</h3>
-  <p>Si prefieres un script independiente fuera de HA:</p>
-  <pre data-lang="bash"><code><span class="code-comment">#!/bin/bash</span>
-```
-
+    <div class="step" data-step="Paso 5">
+      <h3>Script anti-reposo (alternativa)</h3>
+      <p>Si prefieres un script independiente fuera de HA:</p>
+      <pre data-lang="bash"><code><span class="code-comment">#!/bin/bash</span>
 <span class="code-cmd">while true</span>; do
-<span class="code-cmd">if</span> ! catt -d <span class="code-str">“Pantalla del salón”</span> status | grep <span class="code-str">‘PLAYING’</span>; <span class="code-cmd">then</span>
-catt -d <span class="code-str">“Pantalla del salón”</span> volume 5
-catt -d <span class="code-str">“Pantalla del salón”</span> cast_site   
-<span class="code-str">http://192.168.1.100:8123/lovelace-nest/0</span>
-<span class="code-cmd">fi</span>
-sleep 540  <span class="code-comment"># 9 minutos</span>
+  <span class="code-cmd">if</span> ! catt -d <span class="code-str">"Pantalla del salón"</span> status | grep <span class="code-str">'PLAYING'</span>; <span class="code-cmd">then</span>
+    catt -d <span class="code-str">"Pantalla del salón"</span> volume 5
+    catt -d <span class="code-str">"Pantalla del salón"</span> cast_site \
+      <span class="code-str">http://192.168.1.100:8123/lovelace-nest/0</span>
+  <span class="code-cmd">fi</span>
+  sleep 540  <span class="code-comment"># 9 minutos</span>
 <span class="code-cmd">done</span></code></pre>
-</div>
-
+    </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- ============ TIPS ============ -->
-
   <section class="section" id="tips">
     <div class="section-label">✨ Extra</div>
     <h2>Tips y optimizaciones</h2>
 
-```
-<div class="step" data-step="Tip 1">
-  <h3>Instala kiosk-mode para un look limpio</h3>
-  <p>El complemento <code>kiosk-mode</code> de HACS oculta la barra superior, sidebar y otros elementos de la UI. Añade <code>?kiosk</code> al final de la URL del dashboard para activarlo.</p>
-</div>
+    <div class="step" data-step="Tip 1">
+      <h3>Instala kiosk-mode para un look limpio</h3>
+      <p>El complemento <code>kiosk-mode</code> de HACS oculta la barra superior, sidebar y otros elementos de la UI. Añade <code>?kiosk</code> al final de la URL del dashboard para activarlo.</p>
+    </div>
 
-<div class="step" data-step="Tip 2">
-  <h3>Diseña dashboards específicos para 7 pulgadas</h3>
-  <ul>
-    <li>Usa Grid Cards para organizar el layout</li>
-    <li>Botones grandes (mínimo 48px de alto) para uso táctil</li>
-    <li>Fuentes legibles, evita textos pequeños</li>
-    <li>Muestra solo lo esencial: reloj, clima, luces, escenas</li>
-  </ul>
-</div>
+    <div class="step" data-step="Tip 2">
+      <h3>Diseña dashboards específicos para 7 pulgadas</h3>
+      <ul>
+        <li>Usa Grid Cards para organizar el layout</li>
+        <li>Botones grandes (mínimo 48px de alto) para uso táctil</li>
+        <li>Fuentes legibles, evita textos pequeños</li>
+        <li>Muestra solo lo esencial: reloj, clima, luces, escenas</li>
+      </ul>
+    </div>
 
-<div class="step" data-step="Tip 3">
-  <h3>Baja el volumen del "bip" de cast</h3>
-  <p>Cada vez que se inicia un cast, el Nest Hub hace un sonido. Puedes bajar el volumen antes de castear usando el parámetro <code>volume</code> en CCD o con:</p>
-  <pre data-lang="yaml"><code><span class="code-key">service</span>: <span class="code-val">media_player.volume_set</span>
-```
-
+    <div class="step" data-step="Tip 3">
+      <h3>Baja el volumen del "bip" de cast</h3>
+      <p>Cada vez que se inicia un cast, el Nest Hub hace un sonido. Puedes bajar el volumen antes de castear usando el parámetro <code>volume</code> en CCD o con:</p>
+      <pre data-lang="yaml"><code><span class="code-key">service</span>: <span class="code-val">media_player.volume_set</span>
 <span class="code-key">data</span>:
-<span class="code-key">entity_id</span>: <span class="code-str">media_player.nest_hub_salon</span>
-<span class="code-key">volume_level</span>: <span class="code-val">0.05</span></code></pre>
-</div>
+  <span class="code-key">entity_id</span>: <span class="code-str">media_player.nest_hub_salon</span>
+  <span class="code-key">volume_level</span>: <span class="code-val">0.05</span></code></pre>
+    </div>
 
-```
-<div class="step" data-step="Tip 4">
-  <h3>Usa temas oscuros para no deslumbrar de noche</h3>
-  <p>Configura un tema oscuro para el usuario del Nest Hub o usa una automatización que cambie el tema según la hora del día.</p>
-</div>
+    <div class="step" data-step="Tip 4">
+      <h3>Usa temas oscuros para no deslumbrar de noche</h3>
+      <p>Configura un tema oscuro para el usuario del Nest Hub o usa una automatización que cambie el tema según la hora del día.</p>
+    </div>
 
-<div class="step" data-step="Tip 5">
-  <h3>Solución de problemas comunes</h3>
-  <ul>
-    <li><strong>Pantalla en blanco:</strong> Verifica que Trusted Networks está bien configurado y reinicia HA</li>
-    <li><strong>Se desconecta a los 10 min:</strong> Instala <code>ha-catt-fix</code> (Método 1, paso 3)</li>
-    <li><strong>No encuentra el dispositivo:</strong> El nombre debe ser EXACTO al de Google Home, incluidas mayúsculas</li>
-    <li><strong>Login loop:</strong> Asegúrate de que <code>allow_bypass_login: true</code> está configurado</li>
-  </ul>
-</div>
-```
-
+    <div class="step" data-step="Tip 5">
+      <h3>Solución de problemas comunes</h3>
+      <ul>
+        <li><strong>Pantalla en blanco:</strong> Verifica que Trusted Networks está bien configurado y reinicia HA</li>
+        <li><strong>Se desconecta a los 10 min:</strong> Instala <code>ha-catt-fix</code> (Método 1, paso 3)</li>
+        <li><strong>No encuentra el dispositivo:</strong> El nombre debe ser EXACTO al de Google Home, incluidas mayúsculas</li>
+        <li><strong>Login loop:</strong> Asegúrate de que <code>allow_bypass_login: true</code> está configurado</li>
+      </ul>
+    </div>
   </section>
 
 </div>
 
 <!-- Footer -->
-
 <footer class="footer">
   <p>Guía creada para Home Assistant + Google Nest Hub 2 · Sin Nabu Casa · 100% Local<br>
   <span style="color:var(--accent)">♥</span> Basado en proyectos open source de la comunidad HA</p>
 </footer>
 
 <!-- Smooth reveal on scroll -->
-
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -757,6 +695,5 @@ document.querySelectorAll('.step, .option-card').forEach(el => {
   observer.observe(el);
 });
 </script>
-
 </body>
 </html>
